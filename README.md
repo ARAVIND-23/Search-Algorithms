@@ -19,13 +19,55 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
+#Devoloped by-ARAVIND G
+#Register number-212223240011
+def binary(array, key, low, high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if array[mid]==key:
+           return mid
+        elif array[mid]<key:
+           low=mid+1
+        elif array[mid]>key:
+           high=mid-1
+    return -1
+array=eval(input())
+key=int (input())
+array.sort ()
+low, high=0, len (array) - 1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
+#Developed by:ARAVIND G
+#Register number:212223240011
+def binary(array, key, low, high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if array[mid]==key:
+           return mid
+        elif array[mid]<key:
+           low=mid+1
+        elif array[mid]>key:
+           high=mid-1
+    return -1
+array=eval(input())
+key=int (input())
+array.sort ()
+low, high=0, len (array)- 1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -33,15 +75,35 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
-
-
-
+#Developed by:ARAVIND G
+#Register number:212223240011
+def binary(array,key,low, high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            return binary(array,key,mid+1,high)
+        elif array [mid]>key:
+            return binary(array,key,low,mid-1)
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 ```
 ## Sample Input and Output
 
-
+![Screenshot 2024-04-23 111148](https://github.com/ARAVIND-23/Search-Algorithms/assets/138970182/3a278d7f-8a89-463c-8d79-1c4984c07c9b)
+![Screenshot 2024-04-23 111228](https://github.com/ARAVIND-23/Search-Algorithms/assets/138970182/97b825b8-a57c-4314-8698-e130a5ba5445)
+![Screenshot 2024-04-23 111308](https://github.com/ARAVIND-23/Search-Algorithms/assets/138970182/a2c7e2dd-8377-4622-9d16-ce321b9c4b02)
 
 
 
